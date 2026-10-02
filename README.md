@@ -1,0 +1,3 @@
+# testgen
+
+testgen, Spring Boot projelerindeki service sınıfları için JUnit 5 ve Mockito ile birim testlerini otomatik üreten, büyük dil modeli tabanlı çok aşamalı bir sistemdir. Hedef proje statik analizle taranır, kaynak kod ve derlenmiş bytecode üzerinden bağlam (imzalar, bağımlılıklar, çağrılan metotların gövdeleri) çıkarılır ve her metot için ayrı bir prompt ile test üretilir. Üretilen testler derlenir ve çalıştırılır, hata alınırsa model geri bildirimle testi kendisi onarır, onarılamayan testler karantinaya alınır ve geçerli testler sınıf bazında birleştirilir. Son aşamada JaCoCo ile satır/dal kapsamı, PIT ile mutasyon skoru otomatik ölçülür. Aşamalar birbirinden bağımsızdır, model (OpenRouter veya yerel Ollama) kolayca değiştirilebilir.
